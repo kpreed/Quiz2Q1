@@ -2,6 +2,10 @@ package MainPackage;
 
 import org.apache.poi.ss.formula.functions.FinanceLib;
 
+/*
+ * Why wouldn't you just create a class with static methods instead of having to create an object to run the methods?
+ */
+
 /**
  * The PaybackCalc object allows for the calculation for monthly school loan repayments with the FinanceLib pmt() method
  * 
@@ -97,7 +101,7 @@ public class PaybackCalc
 	/**
 	 * @return the total debt owed after 4 years of college
 	 */
-	private double totalCost()
+	public double totalCost()
 	{
 		double cost = 0;
 		double currTuition = this.getTuition();

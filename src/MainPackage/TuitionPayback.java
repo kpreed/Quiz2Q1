@@ -20,13 +20,14 @@ public class TuitionPayback
 		System.out.println("What is the repayment APR?");
 		double APR = input.nextDouble();
 		System.out.println("What is the repayment term? (years)");
-		int term = input.nextInt();
+		double term = input.nextDouble();
 		
 		input.close();
 		
 		PaybackCalc calc = new PaybackCalc(tuition,increase,APR,term);
 		
-		System.out.printf("You need to pay back: $%.2f",calc.repaymentAmnt());
-		System.out.printf(" a month");
+		System.out.printf("\nThe total cost of tuition will be: $%.2f",calc.totalCost());
+		System.out.printf("\nYou need to pay back: $%.2f",calc.repaymentAmnt());
+		System.out.printf(" a month to repay your loans in time");
 	}
 }
